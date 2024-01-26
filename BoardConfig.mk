@@ -47,7 +47,7 @@ TARGET_KERNEL_CONFIG := lineageos_cheryl_defconfig
 TARGET_KERNEL_SOURCE := kernel/razer/msm8998
 
 BOARD_KERNEL_CMDLINE := androidboot.console=ttyMSM0 androidboot.hardware=qcom
-BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x37 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048
 BOARD_KERNEL_CMDLINE += loop.max_part=7
@@ -74,9 +74,6 @@ AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 
-# Bluetooth
-BOARD_HAVE_BLUETOOTH_QCOM := true
-
 # Camera
 MALLOC_SVELTE_FOR_LIBC32 := true
 
@@ -85,8 +82,6 @@ TARGET_SCREEN_DENSITY := 560
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
-
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
